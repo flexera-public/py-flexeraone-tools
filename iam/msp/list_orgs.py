@@ -77,9 +77,3 @@ def get_closest_match(x, org_list):
     best_match = list(filter(lambda x: x['match_score'] < number_of_changes_needed/2, org_list))
     top_ten = sorted(best_match, key=lambda i: i['match_score'])[:10]
     return top_ten
-
-
-if __name__ == '__main__':
-    # click passes no args
-    # pylint: disable=no-value-for-parameter
-    list_iam_msp_orgs(auto_envvar_prefix='FLEXERA')

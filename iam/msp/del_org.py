@@ -39,9 +39,3 @@ def delete_org(host, access_token, msp_org_id, org_id):
     delete_request = requests.delete(managed_service_provider_customer_url, **kwargs)
     delete_request.raise_for_status()
     logging.info("Response: {}\nHeaders: {}\n".format(delete_request.status_code, delete_request.headers))
-
-
-if __name__ == '__main__':
-    # click passes no args
-    # pylint: disable=no-value-for-parameter
-    del_iam_msp_org(auto_envvar_prefix='FLEXERA')

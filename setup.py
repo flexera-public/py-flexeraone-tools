@@ -11,7 +11,7 @@ test_deps = [
 ]
 
 dev_deps = [
-    'pydoc-markdown'
+
 ]
 
 extras = {
@@ -21,7 +21,7 @@ extras = {
 readme = open('README.md', 'r+')
 
 setup(
-    name="py-flexeraone-tools",
+    name="py_flexeraone_tools",
     version="0.0.1",
     author="Flexera",
     author_email="support@flexera.com",

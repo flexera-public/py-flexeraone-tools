@@ -43,9 +43,3 @@ def update_org(host, access_token, msp_org_id, org_id, options):
     update_request = requests.patch(managed_service_provider_customer_url, json.dumps(options), **kwargs)
     update_request.raise_for_status()
     logging.info("Response: {}\nHeaders: {}\n".format(update_request.status_code, update_request.headers))
-
-
-if __name__ == '__main__':
-    # click passes no args
-    # pylint: disable=no-value-for-parameter
-    update_iam_msp_org(auto_envvar_prefix='FLEXERA')
